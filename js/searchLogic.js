@@ -3,6 +3,23 @@ const inputBox = searchWrapper.querySelector("input");
 const suggBox = searchWrapper.querySelector(".autocom-box");
 let linkTag = searchWrapper.querySelector("a");
 
+const url = "http://api.tvmaze.com/shows";
+let titles = [];
+
+const req = new XMLHttpRequest();
+req.open("GET", url, true);
+req.onload = function () {
+    const response = JSON.parse(req.responseText);
+    response.forEach(function (el) {
+        titles.push({
+            name: el.name,
+            id: el.id
+        });
+    });
+};
+req.send();
+
+
 let handler = function(e) {
     let userData = e.target.value; 
     let emptyArray = [];

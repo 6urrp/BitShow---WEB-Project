@@ -1,20 +1,37 @@
+$small: 576px;
+$medium: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Futura Now", "sans-serif";
+}
 header {
-    width: 100%;
+    width: 100vw;
     background-color: rgb(33,37,41);
-    padding: 7px 0;
+    padding: 20px 0;
     nav {
         width: 60%;
         margin:0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         h1 {
-            color: white;
+            text-align: center;
             padding-top: 7px;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color:rgb(216, 201, 201)
+                }
+            }
         }
         .wrapper{
-            max-width: 250px;
+            max-width: 100%;
             padding-top:10px;
+            
         }
         .search-input{
             background: #fff;
@@ -36,7 +53,7 @@ header {
             padding: 0;
             opacity: 0;
             pointer-events: none;
-          }
+            }
         .search-input.active .autocom-box{
             padding: 10px 8px;
             opacity: 1;
@@ -70,32 +87,53 @@ header {
 
 main {
     width: 65%;
-    margin:0 auto;
+    margin:30px auto;
     h2 {
         text-align: center;
         margin-bottom: 20px;
-    }
-    .main-flex {
-        display: flex;
-        flex-wrap: wrap;
+        font-size: 2em;
     }
     .imageDiv {
-        width: 60%;
-        margin-right: 15px;
+        width: 100%;
         img {
             width: 100%;
             height: 100%;
-            padding: 30px;
+            border-radius: 5px;
         }
     }
     .info {
-        width: 35%;
+        width: 100%;
+        margin: 20px 0;
         padding: 20px;
+        text-align: center;
+        .seasons {
+            background-color: rgb(235, 233, 233);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            .season-date {
+                padding: 0;
+            }
+        }
+        .cast {
+            @extend .seasons;
+            .cast-list {
+                padding: 0;
+            }                
+        }
+        ul {
+            list-style: none;
+        }
     }
     .description {
+        text-align: center;
         h4 {
             margin-bottom: 20px;
         }
+    }
+    h4 {
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(143, 141, 141);
     }
 }
 
@@ -107,4 +145,64 @@ footer {
     small {
         color: white;
     }
+}
+
+@media screen and (min-width: $small) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        .wrapper {
+            width: 220px;
+        }
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .info {
+        display: flex;
+        justify-content: space-between;
+        .seasons {
+           width: 220px;
+        }
+    }
+}
+
+@media screen and (min-width: $lg) {
+    .input-type {
+        padding: 25px 15px;
+    }
+    .tv-title {
+        font-size: 3em;
+        
+    }
+    .main-flex {
+        display: flex;
+        margin-bottom: 60px;
+        margin-top: 50px;
+        .imageDiv {
+            padding: 0 50px;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: fit-content;
+            padding-top: 0;
+            margin-top: 0;
+        }
+        
+    }
+    .description {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: $lg) {
+    .info {
+        .seasons, .cast {
+            width: 300px;
+            font-size: 1.2em;
+        }
+    }
+    
 }
