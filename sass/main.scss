@@ -1,20 +1,35 @@
+$small: 576px;
+$medium: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Futura Now", "sans-serif";
+}
+
 header {
-    width: 100%;
+    width: 100vw;
     background-color: rgb(33,37,41);
-    padding: 7px 0;
+    padding: 20px 0;
     nav {
         width: 60%;
         margin:0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         h1 {
-            color: white;
+            text-align: center;
             padding-top: 7px;
+            color: white;
+            &:hover {
+                color:rgb(216, 201, 201);
+            }
         }
         .wrapper{
-            max-width: 250px;
+            max-width: 100%;
             padding-top:10px;
+            
         }
         .search-input{
             background: #fff;
@@ -36,7 +51,7 @@ header {
             padding: 0;
             opacity: 0;
             pointer-events: none;
-          }
+            }
         .search-input.active .autocom-box{
             padding: 10px 8px;
             opacity: 1;
@@ -68,45 +83,128 @@ header {
     }
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
 main {
-    width: 55%;
-    margin:0 auto;
+    width: 65%;
+    margin:30px auto;
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 40px;
+        font-size: 2.3em;
+    }
     .main-div {
-        display: flex;
-        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        
     }
     .tv-div {
         cursor: pointer;
-        width: 31%;
-        border: 1px solid rgb(202, 202, 202);
-        border-radius: 5px;
         padding: 15px;
-        margin: 5px;
-        img {
-            width: 100%;
-            height: 80%;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: rgb(240, 234, 234);
+        &:hover {
+            background-color: rgb(226, 222, 222);
         }
         h4 {
-            font-size: inherit;
-            padding-top: 20px;
-            margin-bottom: 10px;
-            color: rgb(51, 126, 247);
+            padding: 20px 0;
+            color: rgb(128, 68, 68);
+            &:hover {
+                color: rgb(160, 107, 107);
+            }
         }
     }
-    
-    
 }
+
 footer {
     background-color: rgb(33,37,41);
     padding: 25px 0;
     text-align: center;
     margin-top: 30px;
     small {
-        color: white;
+    color: white;
+        .linkedin {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: rgba(213, 187, 214, 0.932);
+            }
+        }
     }
 }
+
+@media screen and (min-width: $small) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        .wrapper {
+            width: 220px;
+        }
+    }
+    main {
+        width: 75%;
+    }
+    .main-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: $xl) {
+    main {
+        width: 60%;
+        h2 {
+            margin-bottom: 80px;
+            font-size: 2.5em;
+        }
+        .tv-div {
+            width: 24%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+// main {
+//     width: 55%;
+//     margin:0 auto;
+//     .main-div {
+//         display: flex;
+//         flex-wrap: wrap;
+//     }
+//     .tv-div {
+//         cursor: pointer;
+//         width: 31%;
+//         border: 1px solid rgb(202, 202, 202);
+//         border-radius: 5px;
+//         padding: 15px;
+//         margin: 5px;
+//         img {
+//             width: 100%;
+//             height: 80%;
+//         }
+//         h4 {
+//             font-size: inherit;
+//             padding-top: 20px;
+//             margin-bottom: 10px;
+//             color: rgb(51, 126, 247);
+//         }
+//     }
+    
+    
+// }
+
+// footer {
+//     background-color: rgb(33,37,41);
+//     padding: 25px 0;
+//     text-align: center;
+//     margin-top: 30px;
+//     small {
+//         color: white;
+//     }
+// }

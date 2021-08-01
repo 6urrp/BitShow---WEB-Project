@@ -1,18 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Futura Now", "sans-serif"; }
+
 header {
-  width: 100%;
+  width: 100vw;
   background-color: #212529;
-  padding: 7px 0; }
+  padding: 20px 0; }
   header nav {
     width: 60%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
+    margin: 0 auto; }
     header nav h1 {
-      color: white;
-      padding-top: 7px; }
+      text-align: center;
+      padding-top: 7px;
+      color: white; }
+      header nav h1:hover {
+        color: #d8c9c9; }
     header nav .wrapper {
-      max-width: 250px;
+      max-width: 100%;
       padding-top: 10px; }
     header nav .search-input {
       background: #fff;
@@ -56,31 +62,31 @@ header {
         header nav .autocom-box li:hover {
           background-color: #efefef; }
 
-h2 {
-  text-align: center;
-  margin-bottom: 50px; }
-
 main {
-  width: 55%;
-  margin: 0 auto; }
+  width: 65%;
+  margin: 30px auto; }
+  main h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    font-size: 2.3em; }
   main .main-div {
-    display: flex;
-    flex-wrap: wrap; }
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; }
   main .tv-div {
     cursor: pointer;
-    width: 31%;
-    border: 1px solid #cacaca;
-    border-radius: 5px;
     padding: 15px;
-    margin: 5px; }
-    main .tv-div img {
-      width: 100%;
-      height: 80%; }
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #f0eaea; }
+    main .tv-div:hover {
+      background-color: #e2dede; }
     main .tv-div h4 {
-      font-size: inherit;
-      padding-top: 20px;
-      margin-bottom: 10px;
-      color: #337ef7; }
+      padding: 20px 0;
+      color: #804444; }
+      main .tv-div h4:hover {
+        color: #a06b6b; }
 
 footer {
   background-color: #212529;
@@ -89,5 +95,35 @@ footer {
   margin-top: 30px; }
   footer small {
     color: white; }
+    footer small .linkedin {
+      text-decoration: none;
+      color: white; }
+      footer small .linkedin:hover {
+        color: rgba(213, 187, 214, 0.932); }
+
+@media screen and (min-width: 576px) {
+  nav {
+    display: flex;
+    justify-content: space-between; }
+    nav .wrapper {
+      width: 220px; }
+
+  main {
+    width: 75%; }
+
+  .main-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; } }
+@media screen and (min-width: 1200px) {
+  main {
+    width: 60%; }
+    main h2 {
+      margin-bottom: 80px;
+      font-size: 2.5em; }
+    main .tv-div {
+      width: 24%; }
+      main .tv-div img {
+        width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
