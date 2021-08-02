@@ -11,7 +11,7 @@ let showInfo = document.querySelector(".showInfo");
 
 
 const request = new XMLHttpRequest();
-request.open("GET", `http://api.tvmaze.com/shows/${tvShowId}/seasons`)
+request.open("GET", `https://api.tvmaze.com/shows/${tvShowId}/seasons`)
 
 request.onload = function() {
     const response = JSON.parse(request.responseText);
@@ -32,7 +32,7 @@ request.send();
 
 
 const request2 = new XMLHttpRequest();
-request2.open("GET", `http://api.tvmaze.com/shows/${tvShowId}/cast`);
+request2.open("GET", `https://api.tvmaze.com/shows/${tvShowId}/cast`);
 request2.onload = function () {
     const response2 = JSON.parse(request2.responseText);
 
@@ -48,7 +48,7 @@ request2.onload = function () {
 request2.send();
 
 const request3 = new XMLHttpRequest();
-request3.open("GET", `http://api.tvmaze.com/shows/${tvShowId}`, true);
+request3.open("GET", `https://api.tvmaze.com/shows/${tvShowId}`, true);
 request3.onload = function(){
     const response3 = JSON.parse(request3.responseText);
     mainTitle.innerText = response3.name;

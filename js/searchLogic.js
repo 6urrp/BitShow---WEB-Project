@@ -3,7 +3,7 @@ const inputBox = searchWrapper.querySelector("input");
 const suggBox = searchWrapper.querySelector(".autocom-box");
 let linkTag = searchWrapper.querySelector("a");
 
-const url = "http://api.tvmaze.com/shows";
+const url = "https://api.tvmaze.com/shows";
 let titles = [];
 
 const req = new XMLHttpRequest();
