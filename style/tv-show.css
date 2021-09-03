@@ -65,7 +65,7 @@ header {
           background-color: #efefef; }
 
 main {
-  width: 65%;
+  width: 70%;
   margin: 30px auto; }
   main h2 {
     text-align: center;
@@ -75,7 +75,6 @@ main {
     width: 100%; }
     main .imageDiv img {
       width: 100%;
-      height: 100%;
       border-radius: 5px; }
   main .info {
     width: 100%;
@@ -83,6 +82,7 @@ main {
     padding: 20px;
     text-align: center; }
     main .info .seasons, main .info .cast {
+      font-size: 1.4em;
       background-color: #ebe9e9;
       padding: 10px;
       margin-bottom: 10px;
@@ -118,9 +118,7 @@ footer {
 @media screen and (min-width: 768px) {
   .info {
     display: flex;
-    justify-content: space-between; }
-    .info .seasons, main .info .cast {
-      width: 220px; } }
+    justify-content: space-between; } }
 @media screen and (min-width: 992px) {
   .input-type {
     padding: 25px 15px; }

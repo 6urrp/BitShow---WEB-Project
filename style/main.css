@@ -7,7 +7,7 @@
 header {
   width: 100vw;
   background-color: #212529;
-  padding: 20px 0; }
+  padding: 15px 0; }
   header nav {
     width: 60%;
     margin: 0 auto; }
@@ -67,7 +67,7 @@ main {
   margin: 30px auto; }
   main h2 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 40px;
     font-size: 2.3em; }
   main .main-div {
@@ -75,6 +75,7 @@ main {
     margin: 0 auto;
     text-align: center; }
   main .tv-div {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     cursor: pointer;
     padding: 15px;
     margin-bottom: 20px;
@@ -82,6 +83,8 @@ main {
     background-color: #f0eaea; }
     main .tv-div:hover {
       background-color: #e2dede; }
+    main .tv-div img {
+      width: 100%; }
     main .tv-div h4 {
       padding: 20px 0;
       color: #804444; }
@@ -117,12 +120,12 @@ footer {
     justify-content: space-around; } }
 @media screen and (min-width: 1200px) {
   main {
-    width: 60%; }
+    width: 70%; }
     main h2 {
-      margin-bottom: 80px;
+      margin-bottom: 50px;
       font-size: 2.5em; }
     main .tv-div {
-      width: 24%; }
+      width: 30%; }
       main .tv-div img {
         width: 100%; } }
 

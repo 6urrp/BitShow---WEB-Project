@@ -15,16 +15,18 @@ request.open("GET", `https://api.tvmaze.com/shows/${tvShowId}/seasons`)
 
 request.onload = function() {
     const response = JSON.parse(request.responseText);
-    console.log(response)
     const numberOfSeasons = response.length;
     season.textContent = `Seasons (${numberOfSeasons})`
 
     response.forEach(function (el) {
         let seasonList = document.createElement("li");
-        let firstDate = el.premiereDate;
-        let lastDate = el.endDate;
-
-        seasonList.textContent = `${firstDate}  -   ${lastDate}`;
+        if (!el.premiereDate || !el.endDate) {
+            seasonList.textContent = "To be anounced...";
+        } else {
+            let firstDate = el.premiereDate;
+            let lastDate = el.endDate;
+            seasonList.textContent = `${firstDate}  -   ${lastDate}`;
+        }
         seasonDate.append(seasonList)
     })
 }
@@ -36,11 +38,14 @@ request2.open("GET", `https://api.tvmaze.com/shows/${tvShowId}/cast`);
 request2.onload = function () {
     const response2 = JSON.parse(request2.responseText);
 
-    response2.forEach(function(el) {
-        let castList = document.createElement("li");
-        let castName = el.person.name;
-        castList.textContent = castName;
-        castUl.append(castList);
+    response2.forEach(function(el, index) {
+        if (index < 12) {
+            let castList = document.createElement("li");
+            let castName = el.person.name;
+            castList.textContent = castName;
+            castUl.append(castList);
+        }
+        
     })
 
 }
