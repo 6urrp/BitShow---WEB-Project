@@ -1,3 +1,6 @@
+@import "header";
+@import "footer";
+
 $small: 576px;
 $medium: 768px;
 $lg: 992px;
@@ -10,141 +13,67 @@ $xl: 1200px;
     padding: 0;
     font-family: "Futura Now", "sans-serif";
 }
+
 header {
-    width: 100vw;
-    background-color: rgb(33,37,41);
-    padding: 20px 0;
-    nav {
-        width: 60%;
-        margin:0 auto;
-        h1 {
-            text-align: center;
-            padding-top: 7px;
-            a {
-                text-decoration: none;
-                color: white;
-                &:hover {
-                    color:rgb(216, 201, 201)
-                }
-            }
-        }
-        .wrapper{
-            max-width: 100%;
-            padding-top:10px;
-            
-        }
-        .search-input{
-            background: #fff;
-            width: 100%;
-            border-radius: 5px;
-            position: relative;
-            box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
-        }
-        input{
-            height: 40px;
-            width: 100%;
-            outline: none;
-            border: none;
-            border-radius: 5px;
-            padding: 0 60px 0 20px;
-            font-size: 18px;
-        }
-        .search-input .autocom-box{
-            padding: 0;
-            opacity: 0;
-            pointer-events: none;
-            }
-        .search-input.active .autocom-box{
-            padding: 10px 8px;
-            opacity: 1;
-            pointer-events: auto;
-            li {
-                display: block;
-            }
-        }
-        .autocom-box {
-            width: 100%;
-            background-color: white;
-            position: absolute;
-            top: 39px;
-            left: 0;
-            border: 1px solid rgb(209, 209, 209);
-            li {
-                list-style: none;
-                padding: 8px 12px;
-                display: none;
-                width: 100%;
-                cursor: pointer;
-                border-radius: 3px;
-                border-bottom: 1px solid rgb(209, 209, 209);
-                &:hover {
-                    background-color: #efefef;
-                }
-            }
+    h1 a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            color:rgb(216, 201, 201);
         }
     }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: 2.3em;
 }
 
 main {
-    width: 70%;
-    margin:30px auto;
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 2em;
-    }
-    .imageDiv {
-        width: 100%;
-        img {
-            width: 100%;
-            border-radius: 5px;
-        }
-    }
-    .info {
-        width: 100%;
-        margin: 20px 0;
-        padding: 20px;
-        text-align: center;
-        .seasons {
-            font-size: 1.4em;
-            background-color: rgb(235, 233, 233);
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            .season-date {
-                padding: 0;
-            }
-        }
-        .cast {
-            @extend .seasons;
-            .cast-list {
-                padding: 0;
-            }                
-        }
-        ul {
-            list-style: none;
-        }
-    }
-    .description {
-        text-align: center;
-        h4 {
-            margin-bottom: 20px;
-        }
-    }
-    h4 {
-        padding-bottom: 10px;
-        border-bottom: 1px solid rgb(143, 141, 141);
-    }
+    padding: 0 20px;
+    width: 65%;
+    margin: 0 auto;
 }
 
-footer {
-    background-color: rgb(33,37,41);
-    padding: 25px 0;
-    text-align: center;
-    margin-top: 30px;
-    small {
-        color: white;
+.imageDiv {
+    width: 90%;
+    margin: 10px auto;
+    img {
+        width: 100%;
+        border-radius: 5px;
     }
+}
+.info {
+    padding: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    h4 {
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(179, 179, 179);
+    }
+    ul {
+        list-style: none;
+        padding: 0 30px;
+    }
+    .seasons {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        border-radius: 5px;
+        padding: 10px;
+        width: fit-content;
+        margin: 10px auto;
+        background-color:rgb(240,234,234);
+    }
+    .cast {
+        @extend .seasons;
+    }
+}
+.description {
+    text-align: center;
+    padding: 5px 10px;
 }
 
 @media screen and (min-width: $small) {
@@ -155,51 +84,56 @@ footer {
             width: 220px;
         }
     }
+    main {
+        width: 75%;
+    }
+    .info {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
+
+    
 
 @media screen and (min-width: $medium) {
-    .info {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (min-width: $lg) {
-    .input-type {
-        padding: 25px 15px;
-    }
-    .tv-title {
-        font-size: 3em;
-        
+    main {
+        width: 75%;
+        padding: 0;
     }
     .main-flex {
         display: flex;
-        margin-bottom: 60px;
-        margin-top: 50px;
-        .imageDiv {
-            padding: 0 50px;
-        }
-        .info {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            width: fit-content;
-            padding-top: 0;
-            margin-top: 0;
-        }
-        
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
-    .description {
-        font-size: 1.2em;
+    .imageDiv {
+        width: 55%;
+    }
+    .info {
+        display:initial;
+        width: 35%;
+        margin-left: 15px;
+        .seasons {
+            width: 100%;
+            height: fit-content;
+            .cast {
+                width: 100%;
+                height: fit-content;
+            }
+        }
     }
 }
 
 @media screen and (min-width: $lg) {
+    main {
+        width: 70%;
+    }
+    .imageDiv {
+        width: 50%;
+    }
     .info {
-        .seasons, .cast {
-            width: 300px;
-            font-size: 1.2em;
+        width: 30%;
+        .seasons {
+            margin-bottom: 15px;
         }
     }
-    
 }

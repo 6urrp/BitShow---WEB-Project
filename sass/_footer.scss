@@ -1,0 +1,16 @@
+footer {
+    background-color: rgb(33,37,41);
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 30px;
+    small {
+    color: white;
+        .linkedin {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: rgba(213, 187, 214, 0.932);
+            }
+        }
+    }
+}

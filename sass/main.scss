@@ -1,3 +1,6 @@
+@import "header";
+@import "footer";
+
 $small: 576px;
 $medium: 768px;
 $lg: 992px;
@@ -11,77 +14,6 @@ $xl: 1200px;
     font-family: "Futura Now", "sans-serif";
 }
 
-header {
-    width: 100vw;
-    background-color: rgb(33,37,41);
-    padding: 15px 0;
-    nav {
-        width: 60%;
-        margin:0 auto;
-        h1 {
-            text-align: center;
-            padding-top: 7px;
-            color: white;
-            &:hover {
-                color:rgb(216, 201, 201);
-            }
-        }
-        .wrapper{
-            max-width: 100%;
-            padding-top:10px;
-            
-        }
-        .search-input{
-            background: #fff;
-            width: 100%;
-            border-radius: 5px;
-            position: relative;
-            box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
-        }
-        input{
-            height: 40px;
-            width: 100%;
-            outline: none;
-            border: none;
-            border-radius: 5px;
-            padding: 0 60px 0 20px;
-            font-size: 18px;
-        }
-        .search-input .autocom-box{
-            padding: 0;
-            opacity: 0;
-            pointer-events: none;
-            }
-        .search-input.active .autocom-box{
-            padding: 10px 8px;
-            opacity: 1;
-            pointer-events: auto;
-            li {
-                display: block;
-            }
-        }
-        .autocom-box {
-            width: 100%;
-            background-color: white;
-            position: absolute;
-            top: 39px;
-            left: 0;
-            border: 1px solid rgb(209, 209, 209);
-            li {
-                list-style: none;
-                padding: 8px 12px;
-                display: none;
-                width: 100%;
-                cursor: pointer;
-                border-radius: 3px;
-                border-bottom: 1px solid rgb(209, 209, 209);
-                &:hover {
-                    background-color: #efefef;
-                }
-            }
-        }
-    }
-}
 
 main {
     width: 65%;
@@ -116,23 +48,6 @@ main {
             color: rgb(128, 68, 68);
             &:hover {
                 color: rgb(160, 107, 107);
-            }
-        }
-    }
-}
-
-footer {
-    background-color: rgb(33,37,41);
-    padding: 25px 0;
-    text-align: center;
-    margin-top: 30px;
-    small {
-    color: white;
-        .linkedin {
-            text-decoration: none;
-            color: white;
-            &:hover {
-                color: rgba(213, 187, 214, 0.932);
             }
         }
     }

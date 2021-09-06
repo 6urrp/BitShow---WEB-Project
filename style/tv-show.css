@@ -1,24 +1,16 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Futura Now", "sans-serif"; }
-
 header {
   width: 100vw;
   background-color: #212529;
-  padding: 20px 0; }
+  padding: 10px 0; }
   header nav {
-    width: 60%;
+    width: 70%;
     margin: 0 auto; }
     header nav h1 {
       text-align: center;
-      padding-top: 7px; }
-      header nav h1 a {
-        text-decoration: none;
-        color: white; }
-        header nav h1 a:hover {
-          color: #d8c9c9; }
+      padding-top: 7px;
+      color: white; }
+      header nav h1:hover {
+        color: #d8c9c9; }
     header nav .wrapper {
       max-width: 100%;
       padding-top: 10px; }
@@ -64,43 +56,6 @@ header {
         header nav .autocom-box li:hover {
           background-color: #efefef; }
 
-main {
-  width: 70%;
-  margin: 30px auto; }
-  main h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em; }
-  main .imageDiv {
-    width: 100%; }
-    main .imageDiv img {
-      width: 100%;
-      border-radius: 5px; }
-  main .info {
-    width: 100%;
-    margin: 20px 0;
-    padding: 20px;
-    text-align: center; }
-    main .info .seasons, main .info .cast {
-      font-size: 1.4em;
-      background-color: #ebe9e9;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px; }
-      main .info .seasons .season-date, main .info .cast .season-date {
-        padding: 0; }
-    main .info .cast .cast-list {
-      padding: 0; }
-    main .info ul {
-      list-style: none; }
-  main .description {
-    text-align: center; }
-    main .description h4 {
-      margin-bottom: 20px; }
-  main h4 {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #8f8d8d; }
-
 footer {
   background-color: #212529;
   padding: 25px 0;
@@ -108,43 +63,112 @@ footer {
   margin-top: 30px; }
   footer small {
     color: white; }
+    footer small .linkedin {
+      text-decoration: none;
+      color: white; }
+      footer small .linkedin:hover {
+        color: rgba(213, 187, 214, 0.932); }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Futura Now", "sans-serif"; }
+
+header h1 a {
+  text-decoration: none;
+  color: inherit; }
+  header h1 a:hover {
+    color: #d8c9c9; }
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  font-size: 2.3em; }
+
+main {
+  padding: 0 20px;
+  width: 65%;
+  margin: 0 auto; }
+
+.imageDiv {
+  width: 90%;
+  margin: 10px auto; }
+  .imageDiv img {
+    width: 100%;
+    border-radius: 5px; }
+
+.info {
+  padding: 0 10px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .info h4 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #b3b3b3; }
+  .info ul {
+    list-style: none;
+    padding: 0 30px; }
+  .info .seasons, .info .cast {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+    margin: 10px auto;
+    background-color: #f0eaea; }
+
+.description {
+  text-align: center;
+  padding: 5px 10px; }
 
 @media screen and (min-width: 576px) {
   nav {
     display: flex;
     justify-content: space-between; }
     nav .wrapper {
-      width: 220px; } }
-@media screen and (min-width: 768px) {
-  .info {
-    display: flex;
-    justify-content: space-between; } }
-@media screen and (min-width: 992px) {
-  .input-type {
-    padding: 25px 15px; }
+      width: 220px; }
 
-  .tv-title {
-    font-size: 3em; }
+  main {
+    width: 75%; }
+
+  .info {
+    width: 70%;
+    margin: 0 auto; } }
+@media screen and (min-width: 768px) {
+  main {
+    width: 75%;
+    padding: 0; }
 
   .main-flex {
     display: flex;
-    margin-bottom: 60px;
-    margin-top: 50px; }
-    .main-flex .imageDiv {
-      padding: 0 50px; }
-    .main-flex .info {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      width: fit-content;
-      padding-top: 0;
-      margin-top: 0; }
+    margin: 0 auto;
+    margin-bottom: 20px; }
 
-  .description {
-    font-size: 1.2em; } }
+  .imageDiv {
+    width: 55%; }
+
+  .info {
+    display: initial;
+    width: 35%;
+    margin-left: 15px; }
+    .info .seasons, .info .cast {
+      width: 100%;
+      height: fit-content; }
+      .info .seasons .cast, .info .cast .cast {
+        width: 100%;
+        height: fit-content; } }
 @media screen and (min-width: 992px) {
-  .info .seasons, main .info .cast, .info .cast {
-    width: 300px;
-    font-size: 1.2em; } }
+  main {
+    width: 70%; }
+
+  .imageDiv {
+    width: 50%; }
+
+  .info {
+    width: 30%; }
+    .info .seasons, .info .cast {
+      margin-bottom: 15px; } }
 
 /*# sourceMappingURL=tv-show.css.map */
